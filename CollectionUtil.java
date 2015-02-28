@@ -1,12 +1,10 @@
 import java.util.*;
 
 public class CollectionUtil {
-	public static List<Integer> map(List<Integer> list, ListMapper listMapper) {
-
-		List<Integer> result = new ArrayList();
-		System.out.println("Map");
-		for(Integer ele : list) {
-			Integer i = (Integer)listMapper.mapCallback(ele,0,list);
+	public static<E> List<E> map(List<E> list, ListMapper listMapper) {
+		List<E> result = new ArrayList();
+		for(E ele : list) {
+			E i = (E)listMapper.mapCallback(ele,0,list);
 			result.add(i);
 		}
 		return result;
