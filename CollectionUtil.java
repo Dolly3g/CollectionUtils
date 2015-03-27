@@ -40,7 +40,7 @@ public class CollectionUtil {
 			pv = listReducer.reducer(pv,ele,++index,list);
 		}
 		return pv;
-	}
-
-	
+	}	
 }
+
+// Test on Size
